@@ -1,0 +1,14 @@
+decisions_BGD_EXPO = {
+	priority = 99999
+	icon = GFX_gui_ppp_party_small
+	
+	allowed = {
+       tag = BGD
+    }
+
+    visible = {
+       has_country_flag = BGD_EXPO_build
+    }
+	
+	scripted_gui = bgd_expo_guis
+}

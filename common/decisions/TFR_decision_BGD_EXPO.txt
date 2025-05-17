@@ -1,0 +1,664 @@
+decisions_BGD_EXPO = {
+	BDG_EXPO_Over = {
+		#截止
+		desc = Over_EXPO_desc
+		is_good = no
+		priority = 110
+
+		allowed = {
+			tag = BGD
+		}
+
+		activation = {
+			always = no
+		}
+
+		available = {
+			check_variable = { 
+				expo_progress = 100
+		    }
+		}
+
+		timeout_effect = {
+			#add_to_variable = { trade_war_schedules_eu = 10 }
+			#
+			#activate_mission = BDG_eu_mission
+			country_event = expo.6
+		}
+
+		days_mission_timeout = 1000
+	}
+
+	BGD_EXPO_Construction = {
+		#建设
+		desc = BGD_EXPO_Construction_desc
+		is_good = yes
+		priority = 100
+
+		allowed = {
+			tag = BGD
+		}
+
+		activation = {
+			always = no
+		}
+
+		available = {
+			date > 2025.4.13
+			check_variable = { 
+				expo_progress = 100
+		    }
+			check_variable = { 
+				expo_quality = 100
+		    }
+			NOT = { has_country_flag = EXPO_Start }
+		}
+
+		timeout_effect = {
+			#add_to_variable = { trade_war_schedules_eu = 10 }
+			#
+			activate_mission = BGD_EXPO_Construction
+			if = {
+				limit = { has_country_flag = BGD_rimi_in_osaka }
+				add_to_variable = {
+					var = expo_progress
+					value = 5
+				}
+				add_to_variable = { 
+					expo_quality = 3
+				}
+			}
+			else = {
+				add_to_variable = {
+					var = expo_progress
+					value = 1
+				}
+				add_to_variable = { 
+					expo_quality = 1
+				}
+			}
+			clamp_variable = {
+			var = expo_progress
+			min = 0
+			max = 100
+			}
+			clamp_variable = {
+				var = expo_quality
+				min = 0
+				max = 100
+			}
+		}
+
+		days_mission_timeout = 20
+	}
+
+	BGD_EXPO_rimi = {
+		#特派专员里美
+		priority = 4
+
+	
+		cost = 10
+		days_remove = 60
+	
+		fire_only_once = yes
+			
+		allowed = {
+			tag = BGD
+		}
+	
+		available = {
+			
+		}
+	
+		visible = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		modifier = {
+			civilian_factory_use = 3
+			expense_growth_factor = 0.15
+		}
+				
+		complete_effect = {
+			
+		}
+	
+		remove_effect = {
+			country_event = {
+				id = expo.2
+			}
+			add_to_variable = { 
+				expo_progress = 10
+				tooltip = add_expo_progress
+	        }
+			add_to_variable = { 
+				expo_quality = 5
+				tooltip = add_expo_quality
+	        }
+			set_variable = {
+			    construction_efficiency = 3
+			}
+		}
+	}
+
+	BGD_EXPO_Attracting_foreign_companies = {
+		#吸引外地企业
+		priority = 4
+	
+	
+		cost = 20
+		days_remove = 60
+	
+		fire_only_once = yes
+			
+		allowed = {
+			tag = BGD
+		}
+	
+		available = {
+			has_country_flag = BGD_rimi_in_osaka
+			check_variable = { 
+				EXPO_work < 1
+				tooltip = check_variable_EXPO_work_tt
+		    }
+		}
+	
+		visible = {
+			has_country_flag = BGD_rimi_in_osaka
+			check_variable = { 
+				EXPO_work < 1
+				tooltip = check_variable_EXPO_work_tt
+		    }
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		modifier = {
+			political_power_cost = 0.1
+			income_growth_factor = 0.05
+		}
+				
+		complete_effect = {
+			set_variable = { 
+				EXPO_work = 1
+	        }
+		}
+	
+		remove_effect = {
+			country_event = {
+				id = expo.7
+			}
+			add_to_variable = { 
+				expo_progress = 12
+				tooltip = add_expo_progress
+	        }
+			add_to_variable = { 
+				expo_quality = 3
+				tooltip = add_expo_quality
+	        }
+			set_variable = { 
+				EXPO_work = 0
+	        }
+		}
+	}
+
+	BGD_EXPO_Meeting_with_the_Restoration_Party = {
+		#与大阪维新会会谈
+		priority = 4
+	
+	
+		cost = 20
+		days_remove = 20
+	
+		fire_only_once = yes
+			
+		allowed = {
+			tag = BGD
+		}
+	
+		available = {
+			has_country_flag = BGD_rimi_in_osaka
+			check_variable = { 
+				EXPO_work < 1
+				tooltip = check_variable_EXPO_work_tt
+		    }
+		}
+	
+		visible = {
+			has_country_flag = BGD_rimi_in_osaka
+			check_variable = { 
+				EXPO_work < 1
+				tooltip = check_variable_EXPO_work_tt
+		    }
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		modifier = {
+			political_power_cost = 0.1
+			income_growth_factor = 0.05
+		}
+				
+		complete_effect = {
+			set_variable = { 
+				EXPO_work = 1
+	        }
+		}
+	
+		remove_effect = {
+			country_event = {
+				id = expo.8
+			}
+			add_to_variable = { 
+				expo_progress = 10
+				tooltip = add_expo_progress
+	        }
+			add_to_variable = { 
+				expo_quality = 2
+				tooltip = add_expo_quality
+	        }
+			set_variable = { 
+				EXPO_work = 0
+	        }
+		}
+	}
+
+	BGD_EXPO_Report_to_the_Central_Government = {
+		#报告中央
+		priority = 4
+	
+	
+		cost = 20
+		days_remove = 20
+	
+		fire_only_once = yes
+			
+		allowed = {
+			tag = BGD
+		}
+	
+		available = {
+			has_country_flag = BGD_rimi_in_osaka
+			check_variable = { 
+				EXPO_work < 1
+				tooltip = check_variable_EXPO_work_tt
+		    }
+			check_variable = { 
+				expo_progress > 44
+		    }
+		}
+	
+		visible = {
+			has_country_flag = BGD_rimi_in_osaka
+			check_variable = { 
+				EXPO_work < 1
+				tooltip = check_variable_EXPO_work_tt
+		    }
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		modifier = {
+			political_power_cost = 0.1
+			income_growth_factor = 0.05
+		}
+				
+		complete_effect = {
+			set_variable = { 
+				EXPO_work = 1
+	        }
+		}
+	
+		remove_effect = {
+			country_event = {
+				id = expo.9
+			}
+			add_to_variable = { 
+				expo_progress = 5
+				tooltip = add_expo_progress
+	        }
+			add_to_variable = { 
+				expo_quality = 5
+				tooltip = add_expo_quality
+	        }
+			set_variable = { 
+				EXPO_work = 0
+	        }
+		}
+	}
+
+	BGD_EXPO_Focus_on_build_quality = {
+		#重视建设质量
+		priority = 4
+	
+	
+		cost = 20
+		days_remove = 35
+	
+		fire_only_once = yes
+			
+		allowed = {
+			tag = BGD
+		}
+	
+		available = {
+			has_country_flag = EXPO_second_step
+			has_country_flag = BGD_rimi_in_osaka
+			check_variable = { 
+				EXPO_work < 1
+				tooltip = check_variable_EXPO_work_tt
+		    }
+		}
+	
+		visible = {
+			has_country_flag = BGD_rimi_in_osaka
+			check_variable = { 
+				EXPO_work < 1
+				tooltip = check_variable_EXPO_work_tt
+		    }
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		modifier = {
+			political_power_cost = 0.1
+			income_growth_factor = 0.05
+		}
+				
+		complete_effect = {
+			set_variable = { 
+				EXPO_work = 1
+	        }
+		}
+	
+		remove_effect = {
+			add_to_variable = { 
+				expo_quality = 10
+				tooltip = add_expo_quality
+	        }
+			set_variable = { 
+				EXPO_work = 0
+	        }
+		}
+	}
+
+
+	BGD_EXPO_Fundraising_Speech = {
+		#募捐演讲
+		priority = 4
+	
+	
+		cost = 20
+		days_remove = 35
+	
+		fire_only_once = yes
+			
+		allowed = {
+			tag = BGD
+		}
+	
+		available = {
+			has_country_flag = EXPO_second_step
+			has_country_flag = BGD_rimi_in_osaka
+			check_variable = { 
+				EXPO_work < 1
+				tooltip = check_variable_EXPO_work_tt
+		    }
+		}
+	
+		visible = {
+			has_country_flag = BGD_rimi_in_osaka
+			check_variable = { 
+				EXPO_work < 1
+				tooltip = check_variable_EXPO_work_tt
+		    }
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		modifier = {
+			political_power_cost = 0.1
+			income_growth_factor = 0.05
+		}
+				
+		complete_effect = {
+			set_variable = { 
+				EXPO_work = 1
+	        }
+		}
+	
+		remove_effect = {
+			country_event = {
+				id = expo.10
+			}
+			add_to_variable = { 
+				expo_progress = 5
+				tooltip = add_expo_progress
+	        }
+			add_to_variable = { 
+				expo_quality = 5
+				tooltip = add_expo_quality
+	        }
+			set_variable = { 
+				EXPO_work = 0
+	        }
+		}
+	}
+
+
+	BGD_EXPO_Choosing_a_mascot = {
+		#选择吉祥物
+		priority = 4
+	
+	
+		cost = 20
+		days_remove = 35
+	
+		fire_only_once = yes
+			
+		allowed = {
+			tag = BGD
+		}
+	
+		available = {
+			has_country_flag = EXPO_second_step
+			has_country_flag = BGD_rimi_in_osaka
+			check_variable = { 
+				EXPO_work < 1
+				tooltip = check_variable_EXPO_work_tt
+		    }
+		}
+	
+		visible = {
+			has_country_flag = BGD_rimi_in_osaka
+			check_variable = { 
+				EXPO_work < 1
+				tooltip = check_variable_EXPO_work_tt
+		    }
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		modifier = {
+			political_power_cost = 0.1
+			income_growth_factor = 0.05
+		}
+				
+		complete_effect = {
+			set_variable = { 
+				EXPO_work = 1
+	        }
+		}
+	
+		remove_effect = {
+			country_event = {
+				id = expo.11
+			}
+			set_variable = { 
+				EXPO_work = 0
+	        }
+		}
+	}
+
+
+	BGD_EXPO_Final_Promotion_and_Speech = {
+		#最终宣传与演讲
+		priority = 4
+	
+	
+		cost = 20
+		days_remove = 35
+	
+		fire_only_once = yes
+			
+		allowed = {
+			tag = BGD
+		}
+	
+		available = {
+			has_country_flag = EXPO_second_step
+			has_country_flag = BGD_rimi_in_osaka
+			check_variable = { 
+				EXPO_work < 1
+				tooltip = check_variable_EXPO_work_tt
+		    }
+			check_variable = { 
+				expo_progress > 84
+		    }
+		}
+	
+		visible = {
+			has_country_flag = BGD_rimi_in_osaka
+			check_variable = { 
+				EXPO_work < 1
+				tooltip = check_variable_EXPO_work_tt
+		    }
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		modifier = {
+			political_power_cost = 0.1
+			income_growth_factor = 0.05
+		}
+				
+		complete_effect = {
+			set_variable = { 
+				EXPO_work = 1
+	        }
+		}
+	
+		remove_effect = {
+			country_event = {
+				id = expo.12
+			}
+			set_variable = { 
+				EXPO_work = 0
+	        }
+		}
+	}
+
+
+
+	BGD_EXPO_start = {
+
+		priority = 6
+	
+		#icon = GFX_jueyi_rimi
+	
+		cost = 0
+		days_remove = 3
+	
+		fire_only_once = yes
+			
+		allowed = {
+			tag = BGD
+		}
+	
+		available = {
+			has_country_flag = BGD_EXPO_build_over
+			date > 2025.4.13
+			check_variable = { 
+				expo_progress > 99
+		    }
+		}
+	
+		visible = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		modifier = {
+	
+		}
+				
+		complete_effect = {
+			custom_effect_tooltip = BGD_EXPO_start_tt
+		}
+	
+		remove_effect = {
+			custom_effect_tooltip = check_variable_quality_tt
+			if = {
+				limit = {
+					check_variable = { 
+						expo_quality > 99
+					}
+				}
+				hidden_effect = {
+					country_event = {
+						days = 7
+						id = expo.3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { 
+						expo_quality < 99
+						expo_quality > 64
+					}
+				}
+				hidden_effect = {
+					country_event = {
+						days = 7
+						id = expo.4
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { 
+						expo_quality < 65
+					}
+				}
+				hidden_effect = {
+					country_event = {
+						days = 7
+						id = expo.5
+					}
+				}
+			}
+		}
+	}
+}

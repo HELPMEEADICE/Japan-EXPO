@@ -1,0 +1,22 @@
+spriteTypes = {
+
+	progressbarType = {
+		name = "GFX_gui_BGD_EXPO_progressbar"
+		textureFile1 = "gfx\interface\BGD\EXPO\full.dds"
+		textureFile2 = "gfx\interface\BGD\EXPO\empty.dds"
+		size = {x = 290 y = 290}
+		effectFile = "gfx/FX/progress_radial.shader"
+	}
+	progressbarType = {
+		name = "GFX_gui_BGD_EXPO_quality_progressbar"
+		textureFile1 = "gfx\interface\BGD\EXPO\quality_full.dds"
+		textureFile2 = "gfx\interface\BGD\EXPO\quality_empty.dds"
+		size = {x = 290 y = 290}
+		effectFile = "gfx/FX/progress_radial.shader"
+	}
+
+	spriteType = {
+		name = "GFX_gui_BGD_EXPO_text_icon"
+		textureFile = "gfx\interface\BGD\EXPO\expo_image.png"
+	}
+}

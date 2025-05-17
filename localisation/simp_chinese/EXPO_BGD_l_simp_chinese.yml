@@ -1,0 +1,13 @@
+﻿l_simp_chinese:
+EXPO_Start: "世博会开幕"
+check_variable_quality_tt: "我们的§C工程质量§！§T将决定最终成果§!"
+BGD_rimi_in_osaka: "§K牛込里美§!抵达大阪"
+expo_progress: "世博会进度"
+expo_quality: "世博会质量"
+add_expo_progress: "§G增加§!世博会进度"
+add_expo_quality: "§G增加§!世博会质量"
+BGD_EXPO_start_tt: "§O2025大阪世界博览会§!§G开幕§!§T了!但愿一切顺利......§!"
+BGD_EXPO_build_over: "世博会演讲结束"
+EXPO_second_step: "启动世博会第二步"
+expo_progress_text: "进度\n[?expo_progress|Y]%\n（外环）"
+expo_quality_text: "质量\n[?expo_quality|Y]%\n（内环）"

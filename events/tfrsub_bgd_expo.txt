@@ -1,0 +1,326 @@
+add_namespace = expo
+
+country_event = {
+	#振兴大阪关西世博
+	id = expo.1
+	title = expo.1.t
+	desc = expo.1.d
+	picture = GFX_popipa_doublerainbow
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = expo.1.a
+		unlock_decision_category_tooltip = decisions_BGD_EXPO
+		activate_mission = BDG_EXPO_Over
+		activate_mission = BGD_EXPO_Construction
+		set_country_flag = BGD_EXPO_build
+		set_variable = {
+		    expo_progress = 5
+		}
+		set_variable = {
+		    expo_quality = 5
+		}
+		#set_variable = {
+		#    construction_efficiency = 1
+		#}
+	}
+}
+
+country_event = {
+	#天降钦差
+	id = expo.2
+	title = expo.2.t
+	desc = expo.2.d
+	picture = GFX_popipa_doublerainbow
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		hidden_effect = {
+			set_country_flag = BGD_rimi_in_osaka
+		}
+		custom_effect_tooltip = BGD_rimi_in_osaka
+		name = expo.2.a
+		add_political_power = 25
+		add_days_mission_timeout = {
+			mission = BDG_EXPO_Over
+			days = 15
+		}
+		add_to_variable = { 
+			expo_quality = 4
+			tooltip = add_expo_quality
+		}
+	}
+}
+country_event = {
+	#大阪世博会圆满举办（最好结局）
+	id = expo.3
+	title = expo.3.t
+	desc = expo.3.d
+	picture = GFX_popipa_doublerainbow
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = expo.3.a
+		set_country_flag = EXPO_Start
+		add_political_power = 50
+		add_stability = 0.1
+		#add_ideas = BGD_langsu_qiji
+		#remove_ideas = BGD_shibo_jianshe_kaixiao
+		#1340 = {
+		#	add_dynamic_modifier = {
+		#		modifier = BGD_chenggong_shibohui
+		#	}
+		#}
+		#531 = {
+		#	add_dynamic_modifier = {
+		#		modifier = BGD_chenggong_shibohui
+		#	}
+		#}
+		hidden_effect = {
+		    remove_mission = BDG_EXPO_Over
+			#news_event = {
+			#	id = news.1225
+			#}
+		}
+	}
+}
+country_event = {
+	#大阪世博会顺利举办（一般结局）
+	id = expo.4
+	title = expo.4.t
+	desc = expo.4.d
+	picture = GFX_popipa_doublerainbow
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = expo.4.a
+		set_country_flag = EXPO_Start
+		add_political_power = 20
+		add_stability = 0.05
+		#remove_ideas = BGD_shibo_jianshe_kaixiao
+		hidden_effect = {
+		    remove_mission = BDG_EXPO_Over
+		}
+	}
+}
+country_event = {
+	#大阪世博会糟糕举办（次坏结局）
+	id = expo.5
+	title = expo.5.t
+	desc = expo.5.d
+	picture = GFX_popipa_doublerainbow
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = expo.5.a
+		set_country_flag = EXPO_Start
+		#remove_ideas = BGD_shibo_jianshe_kaixiao
+		hidden_effect = {
+		    remove_mission = BDG_EXPO_Over
+		}
+	}
+}
+country_event = {
+	#大阪世博会因工程问题遭取消（最坏结局）
+	id = expo.6
+	title = expo.6.t
+	desc = expo.6.d
+	picture = GFX_popipa_doublerainbow
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = expo.6.a
+		set_country_flag = EXPO_Start
+		add_political_power = -50
+		add_stability = -0.05
+		add_popularity = {
+			ideology = social_democrat
+			popularity = -0.04
+		}
+		#remove_ideas = BGD_shibo_jianshe_kaixiao
+		#add_timed_idea = {
+		#	idea = BGD_xiaochen_limei
+		#	days = 365
+		#}		
+		#clr_country_flag = BGD_osaka_kansai_start
+		#hidden_effect = {
+		#    remove_mission = BDG_EXPO_Over
+		#}
+	}
+}
+country_event = {
+	#里美与关西政商界人士的交谈
+	id = expo.7
+	title = expo.7.t
+	desc = expo.7.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = expo.7.a
+		add_political_power = 10
+		add_days_mission_timeout = {
+			mission = BDG_EXPO_Over
+			days = -20
+		}
+		add_to_variable = { 
+			expo_quality = 4
+			tooltip = add_expo_quality
+		}
+	}
+}
+
+country_event = {
+	#里美与维新会的会谈
+	id = expo.8
+	title = expo.8.t
+	desc = expo.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = expo.8.a
+		add_political_power = 5
+		add_days_mission_timeout = {
+			mission = BDG_EXPO_Over
+			days = 25
+		}
+		add_to_variable = { 
+			expo_quality = 4
+			tooltip = add_expo_quality
+		}
+	}
+}
+country_event = {
+	#里美在东京与有咲的聊天
+	id = expo.9
+	title = expo.9.t
+	desc = expo.9.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = expo.9.a
+		add_political_power = 30
+		set_country_flag = EXPO_second_step
+		add_days_mission_timeout = {
+			mission = BDG_EXPO_Over
+			days = 10
+		}
+		add_to_variable = { 
+			expo_quality = 4
+			tooltip = add_expo_quality
+		}
+	}
+}
+country_event = {
+	#募捐演讲
+	id = expo.10
+	title = expo.10.t
+	desc = expo.10.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = expo.10.a
+		add_political_power = 35
+		add_days_mission_timeout = {
+			mission = BDG_EXPO_Over
+			days = 5
+		}
+		add_to_variable = { 
+			expo_quality = 2
+			tooltip = add_expo_quality
+		}
+	}
+}
+country_event = {
+	#顺便选择一下吉祥物吧
+	id = expo.11
+	title = expo.11.t
+	desc = expo.11.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = expo.11.a
+		add_political_power = 10
+		add_days_mission_timeout = {
+			mission = BDG_EXPO_Over
+			days = 15
+		}
+		add_to_variable = { 
+			expo_quality = 3
+			tooltip = add_expo_quality
+		}
+	}
+	option = {
+		name = expo.11.b
+		add_political_power = 5
+		add_days_mission_timeout = {
+			mission = BDG_EXPO_Over
+			days = 30
+		}
+		add_to_variable = { 
+			expo_quality = 2
+			tooltip = add_expo_quality
+		}
+	}
+}
+country_event = {
+	#ppp的鼓励
+	id = expo.12
+	title = expo.12.t
+	desc = expo.12.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = expo.12.a
+		add_political_power = 20
+		add_days_mission_timeout = {
+			mission = BDG_EXPO_Over
+			days = 5
+		}
+		add_to_variable = { 
+			expo_quality = 5
+			tooltip = add_expo_quality
+		}
+		country_event = {
+			id = expo.13
+			days = 3
+		}
+	}
+}
+country_event = {
+	#最终宣传与演讲
+	id = expo.13
+	title = expo.13.t
+	desc = expo.13.d
+	picture = GFX_rimi2
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = expo.13.a
+		add_political_power = 10
+		add_days_mission_timeout = {
+			mission = BDG_EXPO_Over
+			days = 50
+		}
+		add_to_variable = { 
+			expo_quality = 5
+			tooltip = add_expo_quality
+		}
+		add_to_variable = { 
+			expo_progress = 5
+			tooltip = add_expo_progress
+		}
+		set_country_flag = BGD_EXPO_build_over
+		hidden_effect = {
+			clamp_variable = {
+				var = expo_progress
+				min = 0
+				max = 100
+			}
+			clamp_variable = {
+				var = expo_quality
+				min = 0
+				max = 100
+			}
+		}
+	}
+}

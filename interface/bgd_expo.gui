@@ -1,0 +1,56 @@
+guiTypes = {
+	containerWindowType = {
+		name = "bgd_expo_guis"
+		position = {
+			x = 0
+			y = 0
+		}
+		size = {
+			width = 100%
+			height = 500
+		}
+			iconType = {
+				name = "expo_progressbar"
+				spriteType = "GFX_gui_BGD_EXPO_progressbar"
+				position = { 
+					x = -155
+					y = -250
+				}
+				orientation = CENTER
+			}
+			iconType = {
+				name = "expo_quality_progressbar"
+				spriteType = "GFX_gui_BGD_EXPO_quality_progressbar"
+				position = { 
+					x = -155
+					y = -250
+				}
+				orientation = CENTER
+			}
+			iconType = {
+				name = "expo_text_icon"
+				spriteType = "GFX_gui_BGD_EXPO_text_icon"
+				orientation = CENTER
+				position = {
+					x = -190
+					y = 40
+				}
+			}
+			instantTextBoxType = {
+				name = "expo_progress_text"
+				font = "VCR02_26"
+				text = "expo_progress_text"
+				position = { x = 340 y = 120 }
+				#maxWidth = 190
+				format = center
+			}
+			instantTextBoxType = {
+				name = "expo_quality_text"
+				font = "VCR02_26"
+				text = "expo_quality_text"
+				position = { x = -50 y = 120 }
+				#maxWidth = 190
+				format = center
+			}
+	}
+}

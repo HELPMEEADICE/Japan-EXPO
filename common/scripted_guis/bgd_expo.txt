@@ -1,0 +1,17 @@
+scripted_gui = {
+	bgd_expo_guis = {
+		context_type = decision_category
+		window_name = "bgd_expo_guis"
+		effects = {
+			
+		}
+		properties = {
+			expo_progressbar = {
+				frame = expo_progress
+			}
+			expo_quality_progressbar = {
+				frame = expo_quality
+			}
+		}
+	}
+}
