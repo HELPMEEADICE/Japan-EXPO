@@ -19,4 +19,16 @@ spriteTypes = {
 		name = "GFX_gui_BGD_EXPO_text_icon"
 		textureFile = "gfx\interface\BGD\EXPO\expo_image.png"
 	}
+	spriteType = {
+		name = "GFX_rimi_decisions_icon"
+		textureFile = "gfx\interface\BGD\EXPO\rimi_decisions_icon.png"
+	}
+	spriteType = {
+		name = "GFX_expo_decisions_icon"
+		textureFile = "gfx\interface\BGD\EXPO\expo_decisions_icon.png"
+	}
+	spriteType = {
+		name = "GFX_work_decisions_icon"
+		textureFile = "gfx\interface\BGD\EXPO\work_decisions_icon.png"
+	}
 }

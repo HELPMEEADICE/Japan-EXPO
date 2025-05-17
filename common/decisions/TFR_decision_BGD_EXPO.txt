@@ -4,7 +4,7 @@ decisions_BGD_EXPO = {
 		desc = Over_EXPO_desc
 		is_good = no
 		priority = 110
-
+		icon = GFX_work_decisions_icon
 		allowed = {
 			tag = BGD
 		}
@@ -34,7 +34,7 @@ decisions_BGD_EXPO = {
 		desc = BGD_EXPO_Construction_desc
 		is_good = yes
 		priority = 100
-
+		icon = GFX_work_decisions_icon
 		allowed = {
 			tag = BGD
 		}
@@ -95,7 +95,7 @@ decisions_BGD_EXPO = {
 	BGD_EXPO_rimi = {
 		#特派专员里美
 		priority = 4
-
+		icon = GFX_rimi_decisions_icon
 	
 		cost = 10
 		days_remove = 60
@@ -148,7 +148,7 @@ decisions_BGD_EXPO = {
 	BGD_EXPO_Attracting_foreign_companies = {
 		#吸引外地企业
 		priority = 4
-	
+		icon = GFX_rimi_decisions_icon
 	
 		cost = 20
 		days_remove = 60
@@ -211,7 +211,7 @@ decisions_BGD_EXPO = {
 	BGD_EXPO_Meeting_with_the_Restoration_Party = {
 		#与大阪维新会会谈
 		priority = 4
-	
+		icon = GFX_rimi_decisions_icon
 	
 		cost = 20
 		days_remove = 20
@@ -274,7 +274,7 @@ decisions_BGD_EXPO = {
 	BGD_EXPO_Report_to_the_Central_Government = {
 		#报告中央
 		priority = 4
-	
+		icon = GFX_rimi_decisions_icon
 	
 		cost = 20
 		days_remove = 20
@@ -340,7 +340,7 @@ decisions_BGD_EXPO = {
 	BGD_EXPO_Focus_on_build_quality = {
 		#重视建设质量
 		priority = 4
-	
+		icon = GFX_expo_decisions_icon
 	
 		cost = 20
 		days_remove = 35
@@ -398,7 +398,7 @@ decisions_BGD_EXPO = {
 	BGD_EXPO_Fundraising_Speech = {
 		#募捐演讲
 		priority = 4
-	
+		icon = GFX_rimi_decisions_icon
 	
 		cost = 20
 		days_remove = 35
@@ -463,7 +463,7 @@ decisions_BGD_EXPO = {
 	BGD_EXPO_Choosing_a_mascot = {
 		#选择吉祥物
 		priority = 4
-	
+		icon = GFX_rimi_decisions_icon
 	
 		cost = 20
 		days_remove = 35
@@ -520,7 +520,7 @@ decisions_BGD_EXPO = {
 	BGD_EXPO_Final_Promotion_and_Speech = {
 		#最终宣传与演讲
 		priority = 4
-	
+		icon = GFX_rimi_decisions_icon
 	
 		cost = 20
 		days_remove = 35
@@ -582,7 +582,7 @@ decisions_BGD_EXPO = {
 
 		priority = 6
 	
-		#icon = GFX_jueyi_rimi
+		icon = GFX_expo_decisions_icon
 	
 		cost = 0
 		days_remove = 3

@@ -1,6 +1,6 @@
 decisions_BGD_EXPO = {
 	priority = 99999
-	icon = GFX_gui_ppp_party_small
+	icon = GFX_expo_decisions_icon
 	
 	allowed = {
        tag = BGD
